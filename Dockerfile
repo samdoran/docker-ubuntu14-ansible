@@ -1,6 +1,12 @@
 FROM ubuntu:14.04
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends software-properties-common \
+    && apt-get install -y --no-install-recommends \
+        curl \
+        bash \
+        sudo \
+        ca-certificates \
+        software-properties-common \
+        systemd systemd-cron \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 RUN apt-add-repository ppa:ansible/ansible \
