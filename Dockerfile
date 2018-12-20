@@ -3,6 +3,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         curl \
         bash \
+        python-pip \
         sudo \
         ca-certificates \
         software-properties-common \
