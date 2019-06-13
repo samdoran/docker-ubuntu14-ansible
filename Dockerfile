@@ -5,13 +5,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        curl \
+        aptitude \
         bash \
-        python2.7 \
-        python-pip \
-        sudo \
         ca-certificates \
+        curl \
+        python-apt \
+        python-pip \
+        python2.7 \
         software-properties-common \
+        sudo \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 RUN apt-add-repository ppa:ansible/ansible \
